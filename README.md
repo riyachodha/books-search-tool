@@ -1,5 +1,7 @@
 # Toronto Book Depot
 
+# Clone the repo, run npm install and then npm start to run it locally.
+
 1.  How long did you spend on the coding assignment?
 a.What would you add to your solution if you had more time?
 
