@@ -28,6 +28,55 @@ Example of hooks and custom hook :
 Example of creating a context api:
     const AppContext = React.createContext();
 
+Example of useCallback hook:
+
+ const fetchBooksData = useCallback(async () => {
+    setLoading(true);
+    try {
+      const response = await fetch(`${URL}${searchTerm}`);
+      const data = await response.json();
+      const { docs } = data;
+      if (docs) {
+        const newBooks = docs.slice(0, 20).map((bookSingle) => {
+          const {
+            key,
+            author_name,
+            cover_i,
+            edition_count,
+            first_publish_year,
+            title,
+          } = bookSingle;
+
+          return {
+            id: key,
+            author: author_name,
+            cover_id: cover_i,
+            edition_count: edition_count,
+            first_publish_year: first_publish_year,
+            title: title,
+          };
+        });
+        const alphabeticallySortedTitleData = newBooks.sort((a, b) =>
+          a.title.localeCompare(b.title)
+        );
+        setBooks(alphabeticallySortedTitleData);
+        if (alphabeticallySortedTitleData.length > 1) {
+          setResultTitle("Your Search result");
+        } else {
+          setResultTitle("No Search Result Was Found.");
+        }
+      } else {
+        setBooks([]);
+        setResultTitle("No Search Result Found.");
+      }
+
+      setLoading(false);
+    } catch (error) {
+      console.log(error);
+      setLoading(false);
+    }
+  }, [searchTerm]);
+
 3. How would you track down a performance issue in production? Have you ever had to do this?
 
 Answer: We can follow these steps to track down the performance issues in Prod, Identifying which issue you are facing, could be page load times issue, slow API response or any other. Then we can collect the information/data around the issue we forcasted, this data could be metrics such as CPU usage, memory usage, or any other network activities. After data gathering we can analyze the data, to find in case we can see any patterns or trends that could be causing the performance issue. Post that start to identify the root cause, this code be bug in the code, maybe issue with DB, or any other underlying network or config issues etc. After the root cause we can start fixing the issue, maybe create tech debt stories or tasks. Post fixing and testing the bug thoroughly, We also need to monitor the system to ensure that the performance issues have been resolved. Also manage a documentation regarding the whole process.
