@@ -10,6 +10,7 @@ Answer:
 b.If you didn't spend much time on the coding test, then use this as an opportunity to explain what you would add.
 
 Answer: Tried to add couple of features to make the app look interesting, would have love to use css frameworks like material UI or Tailwind.
+I would spend more time on unit test cases, adding more elaborative components unit test cases, also spent more time on error handling and implementing error pages or better error handling messages for the user. Worked more on the performance handling of the application, make added lazy loading or created more independent and modular components for faster rendering. 
 
 2. What was the most useful feature that was added to the latest version of your chosen language? Please include a snippet of code that shows how you've used it.
 
