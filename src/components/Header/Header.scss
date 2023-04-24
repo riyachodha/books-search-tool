@@ -1,0 +1,18 @@
+.header-content{
+    min-height: 75vh;
+    background: linear-gradient(rgba(60, 48, 63, 0.3), rgba(57, 51, 59, 0.5)), 
+    url("../../images/library-books-image.jpg") center/cover no-repeat;
+    flex-direction: column;
+    @media screen and (max-width: 650px) {
+        min-height: 100vh;
+    }
+}
+.header-title{
+    font-size: 4.2rem;
+}
+.header-text{
+    margin-top: -1.8rem;
+    margin-bottom: 2.8rem;
+    opacity: 0.8;
+    max-width: 770px;
+}
