@@ -13,9 +13,9 @@ const BookList = () => {
     let booksWithCover = books.map((singleBook: any) => {
       return {
         ...singleBook,
-        id: singleBook.id.replace("/works/", ""),
+        id: singleBook?.id.replace("/works/", ""),
         cover_img: singleBook.cover_id
-          ? `https://covers.openlibrary.org/b/id/${singleBook.cover_id}-L.jpg`
+          ? `https://covers.openlibrary.org/b/id/${singleBook?.cover_id}-L.jpg`
           : coverImg,
       };
     });
@@ -26,7 +26,7 @@ const BookList = () => {
   const handleMostRecentSort = () => {
     setButtonSelected("YEAR");
     const newC = [...booksWithCoverArr].sort(
-      (a: any, b: any) => b.first_publish_year - a.first_publish_year
+      (a: any, b: any) => b?.first_publish_year - a?.first_publish_year
     );
     setBooksWithCoverArr(newC);
   };
@@ -34,7 +34,7 @@ const BookList = () => {
   const handleTitleSort = () => {
     setButtonSelected("TITLE");
     const newC = [...booksWithCoverArr].sort((a, b) =>
-      a.title.localeCompare(b.title)
+      a?.title.localeCompare(b.title)
     );
     setBooksWithCoverArr(newC);
   };
