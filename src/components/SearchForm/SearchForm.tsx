@@ -32,7 +32,7 @@ const SearchForm = () => {
               <input
                 type="text"
                 role="textbox"
-                className="form-control"
+                className="form-control form"
                 placeholder="Search the book here..."
                 ref={searchText}
               />

@@ -16,3 +16,8 @@
 .search-form-elem .form-control::placeholder{
     opacity: 0.9;
 }
+.form-control{
+    &.form{
+        width: 100%;
+    }
+}
