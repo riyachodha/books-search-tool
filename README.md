@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# Toronto Book Depot
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1.  How long did you spend on the coding assignment?
+a.What would you add to your solution if you had more time?
 
-## Available Scripts
+Answer:
+1) Would love to add a feature were by using subscription model, user can read the books of their choice. 
+2) Maybe add a feature to enable audio books for users, so that they can search and listen to their favorite books.
 
-In the project directory, you can run:
+b.If you didn't spend much time on the coding test, then use this as an opportunity to explain what you would add.
 
-### `npm start`
+Answer: Tried to add couple of features to make the app look interesting, would have love to use css frameworks like material UI or Tailwind.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. What was the most useful feature that was added to the latest version of your chosen language? Please include a snippet of code that shows how you've used it.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Answer: Context API and Hooks are great features added to React because they provide a way to manage state and share data between components without the need for prop drilling or passing data through intermediate components. They reduce the complexity of the code and make it easier to write and maintain React applications.
 
-### `npm test`
+Context API allows you to create a global data store that can be accessed by any component in your application, regardless of its position in the component tree.       This makes it easy to share data and state across multiple components without the need to pass props down through every level of the tree. It also allows you to       update the state of the context provider, which automatically updates the state of all the components that are consuming that context.
+Hooks, on the other hand, provide a way to manage state and lifecycle methods in functional components. Prior to the introduction of hooks, if you wanted to use       state in a functional component, you had to use a stateless functional component or use a class component. With hooks, you can now use state and lifecycle methods in functional components, which simplifies the code and makes it easier to manage state.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I have used hooks like useState or useEffect in many files and used Context API for managing the state of the application.
 
-### `npm run build`
+Example of hooks and custom hook : 
+  const { books, loading, resultTitle } = useGlobalContext();
+  const [booksWithCoverArr, setBooksWithCoverArr] = useState([] as any);
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Example of creating a context api:
+    const AppContext = React.createContext();
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. How would you track down a performance issue in production? Have you ever had to do this?
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Answer: We can follow these steps to track down the performance issues in Prod, Identifying which issue you are facing, could be page load times issue, slow API response or any other. Then we can collect the information/data around the issue we forcasted, this data could be metrics such as CPU usage, memory usage, or any other network activities. After data gathering we can analyze the data, to find in case we can see any patterns or trends that could be causing the performance issue. Post that start to identify the root cause, this code be bug in the code, maybe issue with DB, or any other underlying network or config issues etc. After the root cause we can start fixing the issue, maybe create tech debt stories or tasks. Post fixing and testing the bug thoroughly, We also need to monitor the system to ensure that the performance issues have been resolved. Also manage a documentation regarding the whole process.
 
-### `npm run eject`
+Answer: Yes, I have had to track down performance issues in production before. In one case, we had a website that was experiencing slow load times. We used applicaton performance management tool like logstasht collect data onthe performance of the system and found that the issue was related to a slow database query. We were able to optimize the query and improve the performance of the website.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4.How would you improve the API that you just used?
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Answer: The Open Library API could be improved by implementing user authentication and authorization, which would allow developers to access protected resources and perform certain actions only if authorized to do so. The Open Library API documentation could be improved to provide more detailed information on how to use the API, including examples of common use cases and best practices for working with the API. The performance of the Open Library API could be improved by implementing caching techniques, optimizing database queries, and scaling the infrastructure to handle increased traffic.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+5. Please describe yourself using correctly formatted JSON.
+Answer: Here is a basic json about myself
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+{
+    "name":"Riya Chodha",
+    "dob":"10th April",
+    "contact":{
+        "mobile":"+1647-710-2434",
+        "email":"chodhariya100@gmail.com"
+    },
+    "location":{
+        "city":"Etobicoke",
+        "province":"Ontario",
+        "country":"Canada"
+    },
+    "origin":"India",
+    "education":{
+        "degree":"Masters in Computer Science"
+    },
+    "experience":{
+        "years":5,
+        "skills":[
+            "React JS",
+            "Redux",
+            "JavaScript",
+            "TypeScript",
+            "Accessibility",
+            "AWS",
+            "HTML",
+            "CSS",
+            "Node JS"
+        ]
+    }
+}
